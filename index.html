@@ -740,7 +740,15 @@
        design_style, references, content_status, has_photos,
        needs_content_creation, budget, deadline, message
     ========================================================= */
-    emailjs.sendForm('service_5ch16nj', 'template_2uk5fxc', form, 'H5NCqWhri0aCNBxDj')
+    emailjs.init({
+  publicKey: "H5NCqWhri0aCNBxDj"
+});
+
+emailjs.sendForm(
+  "service_website_design",
+  "template_2uk5fxc",
+  form
+);
       .then(function(){
         document.getElementById('needForm').style.display = 'none';
         const success = document.getElementById('successMessage');
